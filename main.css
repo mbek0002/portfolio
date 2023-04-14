@@ -133,10 +133,23 @@ h5{
 }
 
 .bg-primary-gradient{
-    background-image: linear-gradient( #193A6F , #5B84C4);
+    background-image: linear-gradient(-90deg, #193A6F , #2d5697, #5B84C4);
     min-height: 35rem;
+    background-size: 400% 400%;
+	animation: gradient 15s ease infinite alternate both;
 }
-
+  
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
 .text-primary-bold{
     color: var(--primary-bold);
 }
@@ -197,6 +210,19 @@ h5{
     height: 25rem;
     display: flex;
     align-items: center;
+}
+
+.header-graphic{
+    animation: grow 3s linear alternate infinite;
+}
+
+@keyframes grow{
+    0% {
+        transform: scale(0.8);
+      }
+      100% {
+        transform: scale(1);
+      }
 }
 
 .home-slider .owl-nav button.owl-prev,
@@ -331,6 +357,70 @@ h5{
     box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.14);
 }
 
+.progress-bar{
+    animation: flowRight 3s linear 1 2s;
+}
+
+@keyframes flowRight{
+    0% {
+        transform: scaleX(0);
+        transform-origin:left center;
+      }
+      50% {
+        transform: scaleX(0.5);
+        transform-origin:left center;
+      }
+      100% {
+        transform: scaleX(1);
+        transform-origin:left center;
+      }
+}
+
+#chat-1 .cls-13:nth-child(1){
+    animation: move 2s linear infinite;
+}
+
+#chat-1 .cls-13:nth-child(2){
+    animation: move 3s linear infinite;
+}
+
+#chat-1 .cls-13:nth-child(3){
+    animation: move 4s linear infinite;
+}
+
+#chat-2 .cls-1:nth-child(1){
+    animation: move 3s linear 0.5s infinite;
+}
+
+#chat-2 .cls-1:nth-child(2){
+    animation: move 4s linear 1s infinite;
+}
+#chat-2 .cls-1:nth-child(3){
+    animation: move 4s linear infinite;
+}
+#chat-2 .cls-1:nth-child(4){
+    animation: move 3s linear infinite;
+}
+
+@keyframes move{
+    0% {
+        width: 30px;
+      }
+      25% {
+        width: 60px;
+      }
+      50% {
+        width: 120px;
+      }
+      75% {
+        width: 210px;
+      }
+      100% {
+        width: 258.81;
+      }
+}
+
+
 .footer-info{
     background-color: var(--primary-bold);
     color: var(--white);
@@ -415,7 +505,18 @@ h5{
         width: 3rem;
     }
 
-    
+    .position{
+        position: relative;
+        width: auto;
+        height: 15rem;
+    }
+
+    .contact-img{
+        height: 22rem;
+        position: absolute;
+        right: 2%;
+        bottom: 0;
+    }
 }
 
 @media screen and (min-width: 992px) {
@@ -455,6 +556,30 @@ h5{
     /* .contact-info{
         padding: 2rem;
     } */
+
+    .position{
+        height: 15rem;
+    }
+    
+    .contact-img{
+        height: 25rem;
+        position: absolute;
+        right: 2%;
+        bottom: 0;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .position{
+        height: 20rem;
+    }
+    
+    .contact-img{
+        height: 30rem;
+        position: absolute;
+        right: 2%;
+        bottom: 0;
+    }
 }
 
  .section-padding {
