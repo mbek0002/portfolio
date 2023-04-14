@@ -218,10 +218,10 @@ h5{
 
 @keyframes grow{
     0% {
-        transform: scale(0.8);
+        transform: scale(0.8) translate(0px, 0px);
       }
       100% {
-        transform: scale(1);
+        transform: scale(1) translate(-50px, -50px);
       }
 }
 
@@ -419,6 +419,29 @@ h5{
         width: 258.81;
       }
 }
+
+.display{
+    display: grid;
+    position: relative;
+    bottom: 0;
+}
+
+.top {
+    --offset: 50px; 
+  
+    position: fixed;
+    bottom: 20px;      
+    margin-right: 10px; 
+    place-self: end;
+    margin-top: calc(100vh + var(--offset));
+  
+    /* visual styling */
+    width: 45px;
+    padding: 0.7rem;
+    aspect-ratio: 1;
+    z-index: 999;
+  }
+
 
 
 .footer-info{
